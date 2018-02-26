@@ -1,3 +1,9 @@
+package com.example.ricky52194.gitreference;
+
+import android.content.Context;
+
+import java.io.InputStream;
+
 /**
  * Created by ricky52194 on 2/22/18.
  */
@@ -39,4 +45,5 @@ public class GitReference {
     public void setSection(String section) {
         this.section = section;
     }
+
 }
