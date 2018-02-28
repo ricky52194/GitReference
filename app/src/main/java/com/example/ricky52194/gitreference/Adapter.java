@@ -44,21 +44,19 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
-        View rowView = mInflater.inflate(android.R.layout.simple_expandable_list_item_2, viewGroup, false);
+        View rowView = mInflater.inflate(R.layout.custom_row_view, viewGroup, false);
 
-        TextView commandView = rowView.findViewById(android.R.id.text1);
-        TextView exampleView = rowView.findViewById(android.R.id.text2);
-        //TextView explanationView = rowView.findViewById(android.R.id.text3);
-        //TextView sectionView = rowView.findViewById(android.R.id.text4);
+        TextView commandView = rowView.findViewById(R.id.command);
+        TextView exampleView = rowView.findViewById(R.id.example);
+        TextView explanationView = rowView.findViewById(R.id.explanation);
+        TextView sectionView = rowView.findViewById(R.id.section);
 
 
         GitReference command = (GitReference) getItem(position);
         commandView.setText(command.getCommand());
         exampleView.setText(command.getExample());
-        //explanationView.setText(command.getExplanation());
-        //sectionView.setText(command.getSection());
-
-
+        explanationView.setText(command.getExplanation());
+        sectionView.setText(command.getSection());
 
         return rowView;
     }
