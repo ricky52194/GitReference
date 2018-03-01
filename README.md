@@ -9,12 +9,13 @@ Create an app that reads a json file of Git commands and displays all of the com
 
 
 ## Images: 
-
+![Screenshot1](GitReference/Screen Shot 2018-03-01 at 2.02.34 PM.png)  
+![Screenshot2](https://github.com/ricky52194/Button-Counter-Ramos/blob/master/Landscape%20ButtonCounter.png)  
 
 ## Reference(s):
-Alternating Color Scheme
-https://stackoverflow.com/questions/13109840/android-alternate-row-colors-in-listview
+Alternating Color Scheme  
+https://stackoverflow.com/questions/13109840/android-alternate-row-colors-in-listview  
 User: Suraj Bajaj
 
-SearchView
-https://coderwall.com/p/zpwrsg/add-search-function-to-list-view-in-android
+SearchView  
+https://coderwall.com/p/zpwrsg/add-search-function-to-list-view-in-android  
