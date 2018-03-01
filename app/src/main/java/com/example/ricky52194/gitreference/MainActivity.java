@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 inputStream = getApplicationContext().getAssets().open(getString(R.string.gitReference_json_tag));
             } catch (Exception ex) {
-                System.out.println(getString(R.string.exception_occurred_tag));
+                Log.i((getString(R.string.JSON_tag)), getString(R.string.exception_occurred_tag));
             }
             jsonString = JsonUtils.parseJsonToString(inputStream);
             boolean isFileCreated = JsonUtils.create(this, filename, jsonString);

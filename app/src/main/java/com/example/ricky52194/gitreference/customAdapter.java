@@ -57,10 +57,18 @@ public class customAdapter extends BaseAdapter{
 
 
         GitReference command = (GitReference) getItem(position);
-        commandView.setText(mContext.getResources().getString(R.string.commandTag) + command.getCommand());
-        exampleView.setText(mContext.getResources().getString(R.string.exampleTag) + command.getExample());
-        explanationView.setText(mContext.getResources().getString(R.string.explanationTag) + command.getExplanation());
-        sectionView.setText(mContext.getResources().getString(R.string.sectionTag) + command.getSection());
+
+        String txt1 = mContext.getResources().getString(R.string.commandTag) + command.getCommand();
+        commandView.setText(txt1);
+
+        String txt2 = mContext.getResources().getString(R.string.exampleTag) + command.getExample();
+        exampleView.setText(txt2);
+
+        String txt3 = mContext.getResources().getString(R.string.explanationTag) + command.getExplanation();
+        explanationView.setText(txt3);
+
+        String txt4 = mContext.getResources().getString(R.string.sectionTag) + command.getSection();
+        sectionView.setText(txt4);
 
         return rowView;
     }

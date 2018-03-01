@@ -13,9 +13,5 @@
     <string name="explanationTag">"Explanation: "</string>
     <string name="sectionTag">"Section: "</string>
     <string name="titleGitReferences">GitReferences</string>
-    <string name="utilsCommandTag">command</string>
-    <string name="utilsExampleTag">example</string>
-    <string name="utilsExplanationTag">explanation</string>
-    <string name="utilsSectionTag">section</string>
-
+    <string name="searchText">Search by Section</string>
 </resources>
