@@ -3,13 +3,25 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
     <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Custom ListView Contents"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_width="fill_parent" />
+        android:text="@string/titleGitReferences"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search by Section">
+        <requestFocus />
+    </SearchView>
+
     <ListView
         android:id="@+id/ListView01"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

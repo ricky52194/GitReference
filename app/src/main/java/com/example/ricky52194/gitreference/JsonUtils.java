@@ -1,15 +1,13 @@
-package com.example.ricky52194.gitreference; /**
+package com.example.ricky52194.gitreference;
+
+/**
  * Created by ricky52194 on 2/22/18.
  */
 
 import android.content.Context;
 import android.util.Log;
-
-import com.example.ricky52194.gitreference.GitReference;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,6 +18,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import static android.content.Context.MODE_APPEND;
 import static android.content.Context.MODE_PRIVATE;
 
 public class JsonUtils {
@@ -53,8 +52,12 @@ public class JsonUtils {
             // Extract json objects from JsonArray and store into ArrayList as class objects
             for(int i=0;i<jArray.length();i++){
                 JSONObject json_data = jArray.getJSONObject(i);
+
                 GitReference gitReference = new GitReference();
                 gitReference.setCommand(json_data.getString("command"));
+                gitReference.setExample(json_data.getString("example"));
+                gitReference.setExplanation(json_data.getString("explanation"));
+                gitReference.setSection(json_data.getString("section"));
 
                 Log.i("JSON", "Adding: " + gitReference.getCommand());
                 data.add(gitReference);
@@ -103,7 +106,7 @@ public class JsonUtils {
 
     public static boolean append(Context context, String fileName, String jsonString) {
         try{
-            FileOutputStream fos =  context.openFileOutput(fileName, Context.MODE_APPEND);
+            FileOutputStream fos =  context.openFileOutput(fileName, MODE_APPEND);
             if(jsonString != null){
                 fos.write(jsonString.getBytes());
             }
